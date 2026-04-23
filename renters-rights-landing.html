@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Renter's Rights Act Webinar | Benjamin Stevens</title>
+<meta name="description" content="The Renter's Rights Act goes live May 1st. Join our expert webinar on Tuesday 28th April 2026 to get compliant before the clock runs out." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --red: #CC0000;
+    --red-dark: #990000;
+    --black: #0A0A0A;
+    --off-black: #111111;
+    --surface: #181818;
+    --white: #FFFFFF;
+    --off-white: #F5F3F0;
+    --muted: #999999;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Barlow', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(10,10,10,0.92);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .nav-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--red);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: 18px;
+    color: white;
+    letter-spacing: -1px;
+  }
+
+  .nav-logo-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 17px;
+    color: var(--white);
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .nav-logo-text span {
+    display: block;
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .nav-cta {
+    background: var(--red);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: background 0.2s;
+  }
+
+  .nav-cta:hover { background: var(--red-dark); }
+
+  /* HERO */
+  .hero {
+    min-height: 100svh;
+    padding-top: 64px;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.015) 79px,
+        rgba(255,255,255,0.015) 80px
+      ),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 79px,
+        rgba(255,255,255,0.015) 79px,
+        rgba(255,255,255,0.015) 80px
+      );
+  }
+
+  .hero-bg-accent {
+    position: absolute;
+    top: 0; right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(135deg, transparent 40%, rgba(204,0,0,0.06) 100%);
+    pointer-events: none;
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100svh - 64px);
+    gap: 2rem;
+  }
+
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .badge {
+    background: var(--red);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  .badge-outline {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid rgba(255,255,255,0.15);
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 2px;
+  }
+
+  .hero-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 0.92;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+  }
+
+  .hero-title .accent { color: var(--red); }
+
+  .hero-title .italic {
+    font-style: italic;
+    color: rgba(255,255,255,0.4);
+    font-size: 0.65em;
+    display: block;
+    letter-spacing: 2px;
+    margin-bottom: 0.1em;
+  }
+
+  .hero-subtitle {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    color: rgba(255,255,255,0.65);
+    max-width: 600px;
+    line-height: 1.7;
+  }
+
+  /* EVENT INFO BAR */
+  .event-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    max-width: 700px;
+  }
+
+  .event-bar-item {
+    flex: 1;
+    min-width: 160px;
+    padding: 1rem 1.25rem;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .event-bar-item:last-child { border-right: none; }
+
+  .event-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+  }
+
+  .event-value {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.5px;
+  }
+
+  /* HERO CTA */
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+  }
+
+  .btn-primary {
+    background: var(--red);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 16px 36px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+    border: 2px solid var(--red);
+  }
+
+  .btn-primary:hover {
+    background: var(--red-dark);
+    border-color: var(--red-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--muted);
+    font-family: 'Barlow', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    text-decoration: none;
+    padding: 16px 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--white); }
+
+  .btn-ghost .arrow { font-size: 1rem; }
+
+  /* SECTION SHARED */
+  section {
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red);
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.5px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: var(--border);
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* TOPICS */
+  .topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 2.5rem;
+  }
+
+  .topic-card {
+    background: var(--surface);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: background 0.2s;
+  }
+
+  .topic-card:hover { background: #1e1e1e; }
+
+  .topic-number {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--red);
+  }
+
+  .topic-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+  }
+
+  .topic-body {
+    font-size: 0.875rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.6;
+  }
+
+  /* SPEAKERS */
+  .speakers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+
+  .speaker-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .speaker-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--red);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: white;
+    letter-spacing: -1px;
+  }
+
+  .speaker-name {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .speaker-role {
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
+  .speaker-role strong {
+    display: block;
+    color: rgba(255,255,255,0.7);
+    font-weight: 600;
+    font-size: 0.82rem;
+  }
+
+  /* CTA SECTION */
+  .cta-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .cta-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    .cta-inner { grid-template-columns: 1fr; }
+  }
+
+  .cta-heading {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 900;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    text-transform: uppercase;
+    line-height: 1;
+    letter-spacing: -0.5px;
+  }
+
+  .cta-heading .accent { color: var(--red); }
+
+  .cta-sub {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin-top: 0.75rem;
+    max-width: 500px;
+  }
+
+  /* COUNTDOWN */
+  .countdown-strip {
+    background: var(--red);
+    padding: 12px clamp(1.5rem, 5vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .countdown-units {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .countdown-num {
+    font-size: 2rem;
+    font-weight: 900;
+    line-height: 1;
+  }
+
+  .countdown-lbl {
+    font-size: 9px;
+    letter-spacing: 2px;
+    opacity: 0.8;
+  }
+
+  .countdown-sep {
+    font-size: 1.5rem;
+    font-weight: 900;
+    opacity: 0.5;
+    margin-top: -4px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-info {
+    font-size: 0.8rem;
+    color: var(--muted);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 2rem;
+  }
+
+  .footer-info a {
+    color: var(--muted);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-info a:hover { color: var(--white); }
+
+  .footer-brand {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.35);
+    text-transform: uppercase;
+  }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal-box {
+    background: #111;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    width: 100%;
+    max-width: 820px;
+    max-height: 90svh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    animation: modalIn 0.25s ease;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: translateY(16px) scale(0.98); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+
+  .modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    flex-shrink: 0;
+    gap: 1rem;
+  }
+
+  .modal-header-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .modal-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--red);
+    animation: pulse 1.5s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  .modal-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .modal-close {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: var(--muted);
+    width: 32px;
+    height: 32px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    line-height: 1;
+    transition: background 0.15s, color 0.15s;
+    flex-shrink: 0;
+  }
+
+  .modal-close:hover {
+    background: rgba(255,255,255,0.12);
+    color: var(--white);
+  }
+
+  .modal-iframe-wrap {
+    flex: 1;
+    position: relative;
+    min-height: 500px;
+  }
+
+  .modal-loader {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background: #111;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .modal-loader.hidden { opacity: 0; }
+
+  .loader-spinner {
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(255,255,255,0.08);
+    border-top-color: var(--red);
+    border-radius: 50%;
+    animation: spin 0.7s linear infinite;
+  }
+
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .loader-text {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .modal-blocked {
+    position: absolute;
+    inset: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.25rem;
+    background: #111;
+    z-index: 3;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .blocked-icon {
+    width: 48px;
+    height: 48px;
+    background: rgba(204,0,0,0.12);
+    border: 1px solid rgba(204,0,0,0.3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+  }
+
+  .blocked-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .blocked-body {
+    font-size: 0.875rem;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 380px;
+  }
+
+  .blocked-link {
+    background: var(--red);
+    color: white;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 12px 28px;
+    border-radius: 2px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s;
+  }
+
+  .blocked-link:hover { background: var(--red-dark); }
+
+  .modal-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    min-height: 500px;
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .fade-up {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .delay-1 { animation-delay: 0.1s; }
+  .delay-2 { animation-delay: 0.25s; }
+  .delay-3 { animation-delay: 0.4s; }
+  .delay-4 { animation-delay: 0.55s; }
+  .delay-5 { animation-delay: 0.7s; }
+
+  /* MOBILE */
+  @media (max-width: 480px) {
+    .event-bar { flex-direction: column; }
+    .event-bar-item { border-right: none; border-bottom: 1px solid var(--border); }
+    .event-bar-item:last-child { border-bottom: none; }
+    .countdown-strip { flex-direction: column; gap: 0.75rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="https://www.benjaminstevens.co.uk" class="nav-logo" target="_blank" rel="noopener">
+    <div class="nav-logo-icon">B</div>
+    <div class="nav-logo-text">
+      Benjamin Stevens
+      <span>Estate Agents</span>
+    </div>
+  </a>
+  <a href="https://zoom.us/webinar/register/WN_cj7NCstaQTqPXiWGFpMzmw" class="nav-cta" target="_blank" rel="noopener">
+    Reserve Your Spot
+  </a>
+</nav>
+
+<!-- COUNTDOWN STRIP -->
+<div class="countdown-strip" id="countdown-strip">
+  <span>Time until the webinar</span>
+  <div class="countdown-units" id="countdown">
+    <div class="countdown-unit"><span class="countdown-num" id="cd-days">--</span><span class="countdown-lbl">Days</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-lbl">Hrs</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-lbl">Min</span></div>
+    <span class="countdown-sep">:</span>
+    <div class="countdown-unit"><span class="countdown-num" id="cd-secs">--</span><span class="countdown-lbl">Sec</span></div>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-bg-accent"></div>
+  <div class="hero-inner">
+
+    <div class="hero-eyebrow fade-up delay-1">
+      <span class="badge">Live Webinar</span>
+      <span class="badge-outline">Free to Attend</span>
+    </div>
+
+    <h1 class="hero-title fade-up delay-2">
+      <span class="italic">The</span>
+      Renter's<br />
+      <span class="accent">Rights</span><br />
+      Briefing
+    </h1>
+
+    <p class="hero-subtitle fade-up delay-3">
+      Section 21 is gone. The Renter's Rights Act goes live <strong>1st May 2026</strong>. 
+      Get the full legal breakdown before your portfolio is exposed.
+    </p>
+
+    <div class="event-bar fade-up delay-4">
+      <div class="event-bar-item">
+        <span class="event-label">Date</span>
+        <span class="event-value">Tuesday, 28 April 2026</span>
+      </div>
+      <div class="event-bar-item">
+        <span class="event-label">Time</span>
+        <span class="event-value">18:00 &ndash; 19:00 BST</span>
+      </div>
+      <div class="event-bar-item">
+        <span class="event-label">Format</span>
+        <span class="event-value">Live Stream via Zoom</span>
+      </div>
+    </div>
+
+    <div class="hero-actions fade-up delay-5">
+      <a href="https://zoom.us/webinar/register/WN_cj7NCstaQTqPXiWGFpMzmw" class="btn-primary" target="_blank" rel="noopener">
+        Register Free Now
+      </a>
+      <a href="#what-youll-learn" class="btn-ghost">
+        What's covered <span class="arrow">&#8594;</span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<!-- WHAT YOU'LL LEARN -->
+<section id="what-youll-learn">
+  <p class="section-label">What you'll learn</p>
+  <h2 class="section-title">Six changes.<br />One hour. No fluff.</h2>
+  <div class="topics-grid">
+    <div class="topic-card">
+      <span class="topic-number">01</span>
+      <span class="topic-heading">The end of Section 21</span>
+      <p class="topic-body">No-fault evictions are abolished. Understand the new Section 8 grounds and how to protect your right to possession.</p>
+    </div>
+    <div class="topic-card">
+      <span class="topic-number">02</span>
+      <span class="topic-heading">Decent Homes Standard</span>
+      <p class="topic-body">New mandatory minimum property conditions apply to the private rental sector for the first time. Know exactly what's required.</p>
+    </div>
+    <div class="topic-card">
+      <span class="topic-number">03</span>
+      <span class="topic-heading">National Landlord Database</span>
+      <p class="topic-body">Registration is compulsory. Understand the new national database requirements and mandatory redress schemes.</p>
+    </div>
+    <div class="topic-card">
+      <span class="topic-number">04</span>
+      <span class="topic-heading">Rent Increase Rules</span>
+      <p class="topic-body">New 2-month notice periods for rent increases and a ban on rental bidding. What this means for your rent review process.</p>
+    </div>
+    <div class="topic-card">
+      <span class="topic-number">05</span>
+      <span class="topic-heading">Pets &amp; Periodic Tenancies</span>
+      <p class="topic-body">Blanket pet bans are out. Fixed-terms are being replaced. How to adapt your tenancy agreements immediately.</p>
+    </div>
+    <div class="topic-card">
+      <span class="topic-number">06</span>
+      <span class="topic-heading">Your 2026 Compliance Roadmap</span>
+      <p class="topic-body">Leave with a clear action plan. What to update, what to file, and what to stop doing before May 1st.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SPEAKERS -->
+<section>
+  <p class="section-label">Expert panel</p>
+  <h2 class="section-title">The people giving you answers.</h2>
+  <div class="speakers-grid">
+    <div class="speaker-card">
+      <div class="speaker-avatar">HW</div>
+      <div>
+        <p class="speaker-name">Harry Waterman</p>
+        <p class="speaker-role"><strong>Partner, Nyman Lisbon Paul</strong>Specialist property solicitor covering landlord and tenant law across England and Wales.</p>
+      </div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-avatar">PO</div>
+      <div>
+        <p class="speaker-name">Paul Offley</p>
+        <p class="speaker-role"><strong>Head of Compliance, The Guild of Property Professionals</strong>The leading voice on regulatory compliance for UK estate and lettings agents.</p>
+      </div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-avatar">SW</div>
+      <div>
+        <p class="speaker-name">Steve Wayne</p>
+        <p class="speaker-role"><strong>Founder, Benjamin Stevens</strong>Hosting alongside his lettings team to bring you real-world application, not just theory.</p>
+      </div>
+    </div>
+    <div class="speaker-card">
+      <div class="speaker-avatar">LF</div>
+      <div>
+        <p class="speaker-name">Louisa Felman</p>
+        <p class="speaker-role"><strong>Benjamin Stevens</strong>Co-hosting and moderating the live Q&A so you get direct answers to your specific questions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <h2 class="cta-heading">Don't get caught<br /><span class="accent">without a plan.</span></h2>
+      <p class="cta-sub">This is the biggest legislative shift in a generation. One hour on the 28th could save you from months of costly mistakes.</p>
+    </div>
+    <div style="display:flex; flex-direction:column; gap:12px; align-items:flex-start;">
+      <a href="https://zoom.us/webinar/register/WN_cj7NCstaQTqPXiWGFpMzmw" class="btn-primary" target="_blank" rel="noopener">
+        Register Free Now
+      </a>
+      <span style="font-size:0.8rem; color:var(--muted); padding-left:2px;">Tuesday 28 April &bull; 18:00 BST &bull; Free</span>
+    </div>
+  </div>
+</div>
+
+<!-- CONTACT FOOTER -->
+<div style="background:var(--off-black); border-top:1px solid var(--border);">
+  <footer>
+    <div class="footer-info">
+      <span>Edgware: <a href="tel:02089581118">020 8958 1118</a></span>
+      <span>Bushey: <a href="tel:02089507777">020 8950 7777</a></span>
+      <a href="mailto:steve@benjaminstevens.co.uk">steve@benjaminstevens.co.uk</a>
+      <a href="https://www.benjaminstevens.co.uk" target="_blank" rel="noopener">www.benjaminstevens.co.uk</a>
+    </div>
+    <p class="footer-brand">Benjamin Stevens &copy; 2026</p>
+  </footer>
+</div>
+
+<!-- REGISTRATION MODAL -->
+<div class="modal-overlay" id="reg-modal" role="dialog" aria-modal="true" aria-label="Webinar Registration">
+  <div class="modal-box">
+    <div class="modal-header">
+      <div class="modal-header-left">
+        <div class="modal-dot"></div>
+        <span class="modal-title">Renter's Rights Webinar &mdash; Register Free</span>
+      </div>
+      <button class="modal-close" id="modal-close-btn" aria-label="Close">&times;</button>
+    </div>
+    <div class="modal-iframe-wrap">
+      <div class="modal-loader" id="modal-loader">
+        <div class="loader-spinner"></div>
+        <span class="loader-text">Loading registration</span>
+      </div>
+      <div class="modal-blocked" id="modal-blocked">
+        <div class="blocked-icon">&#128274;</div>
+        <p class="blocked-title">Registration opens in Zoom</p>
+        <p class="blocked-body">Zoom doesn't allow embedding in other pages. Click below to open the registration form directly — it takes under 30 seconds.</p>
+        <a href="https://zoom.us/webinar/register/WN_cj7NCstaQTqPXiWGFpMzmw" class="blocked-link" target="_blank" rel="noopener">
+          Open Registration &rarr;
+        </a>
+      </div>
+      <iframe
+        id="reg-iframe"
+        class="modal-iframe"
+        src=""
+        title="Webinar Registration"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-popups-to-escape-sandbox"
+      ></iframe>
+    </div>
+  </div>
+</div>
+
+<script>
+  const target = new Date('2026-04-28T18:00:00+01:00');
+
+  function updateCountdown() {
+    const now = new Date();
+    const diff = target - now;
+    if (diff <= 0) {
+      document.getElementById('countdown-strip').innerHTML = '<strong>The webinar is live now. Join on Zoom.</strong>';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    document.getElementById('cd-days').textContent = String(d).padStart(2,'0');
+    document.getElementById('cd-hours').textContent = String(h).padStart(2,'0');
+    document.getElementById('cd-mins').textContent = String(m).padStart(2,'0');
+    document.getElementById('cd-secs').textContent = String(s).padStart(2,'0');
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  const ZOOM_URL = 'https://zoom.us/webinar/register/WN_cj7NCstaQTqPXiWGFpMzmw';
+  const modal = document.getElementById('reg-modal');
+  const iframe = document.getElementById('reg-iframe');
+  const loader = document.getElementById('modal-loader');
+  const blocked = document.getElementById('modal-blocked');
+  let iframeLoaded = false;
+
+  function openModal(e) {
+    if (e) e.preventDefault();
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+
+    if (!iframeLoaded) {
+      loader.classList.remove('hidden');
+      blocked.style.display = 'none';
+      iframe.src = ZOOM_URL;
+      iframeLoaded = true;
+
+      iframe.onload = () => {
+        loader.classList.add('hidden');
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!doc || doc.body.innerHTML.trim() === '') {
+            showBlocked();
+          }
+        } catch (err) {
+          showBlocked();
+        }
+      };
+
+      setTimeout(() => {
+        loader.classList.add('hidden');
+        try {
+          const doc = iframe.contentDocument || iframe.contentWindow.document;
+          if (!doc || doc.body.innerHTML.trim() === '') showBlocked();
+        } catch (err) {
+          showBlocked();
+        }
+      }, 4000);
+    }
+  }
+
+  function showBlocked() {
+    loader.classList.add('hidden');
+    blocked.style.display = 'flex';
+    iframe.style.display = 'none';
+  }
+
+  function closeModal() {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.btn-primary, .nav-cta').forEach(btn => {
+    btn.addEventListener('click', openModal);
+  });
+
+  document.getElementById('modal-close-btn').addEventListener('click', closeModal);
+
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>
+
+</body>
+</html>
